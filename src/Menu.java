@@ -1,22 +1,37 @@
 import java.security.spec.RSAOtherPrimeInfo;
+import java.util.ArrayList;
 
 public class Menu {
     public static void main(String[] args) {
-        //Para probar
+
+        ArrayList <Estudiante> integrantes = new ArrayList<Estudiante>();
+
         /*
         Persona miPersona = new Persona(1753650389,"Melany","Sangucho","Auqui de Monjas", 2605699);
         Persona Pedro = new Persona();
 
+
         System.out.println(miPersona.getCI());
         System.out.println(Pedro.getCI());
+         */
         //-------------------------------------------------------
 
-        Estudiante Mayerli = new Estudiante(1759861359,"Mayerli","Catani","La Floresta",2685484,
-                //atributos propios de estudiante
+        Estudiante Mayerli = new Estudiante(1759861359,"Mayerli","Catani","La Floresta",2685484,20,"Leo","Estudiante",
                 2021321,"mayerli.catani@epn.edu.ec",3,"TSDS");
 
-        Estudiante David = new Estudiante();
+        Estudiante David = new Estudiante(1753584985,"David","Parra","Monjas",2365489,21,"Leo","estudiante",
+                2021859,"david@epn.edu.ed",3,"TSDS");
 
+        integrantes.add(Mayerli);
+        integrantes.add(David);
+
+        System.out.println("Todos los integrantes comienzan");
+        for(Estudiante integrante : integrantes){
+            System.out.print(integrante.getNombre()+" "+integrante.getApellido()+" -> ");
+            integrante.leer();
+        }
+
+        /*
         System.out.println("Nombre: "+Mayerli.getNombre());
         Mayerli.caminar();
         Mayerli.estudiar();
@@ -31,8 +46,13 @@ public class Menu {
         David.trabajar();
         David.leer();
         David.memorizar();
-        */
+         */
+
         //-------------------------------------------------------
+
+
+
+        System.out.println("\n----------------------------------------------------");
 
         Doctor Ana = new Doctor();
         Ana.setOcupacion("Doctora");
@@ -64,7 +84,7 @@ public class Menu {
         Melani.setOcupacion("Estudiante");
         Melani.setSemestre(3);
         System.out.println("Melani es "+Melani.getOcupacion());
-        System.out.println("Esta en "+Melani.getSemestre()+"semestre");
+        System.out.println("Esta en "+Melani.getSemestre()+" semestre");
         Melani.leer();
 
 
